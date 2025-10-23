@@ -25,7 +25,7 @@ function Home() {
       title: "Thank you for your booking!",
       text: "We will send you a confirmation email shortly.",
       icon: "success",
-      timer: 3000,
+      timer: 4000,
       showConfirmButton: false,
     });
     close();

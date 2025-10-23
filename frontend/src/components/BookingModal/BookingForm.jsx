@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./BookingModal.module.css";
 
 function BookingForm({ roomType, booking, onSubmit }) {
+  const [roomOption, setRoomOption] = useState("");
   const [guestName, setGuestName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -9,18 +10,19 @@ function BookingForm({ roomType, booking, onSubmit }) {
   const [checkOut, setCheckOut] = useState("");
 
   useEffect(() => {
+    setRoomOption(booking?.roomType || roomType);
     setGuestName(booking?.guestName || "");
     setEmail(booking?.email || "");
     setPhone(booking?.phone || "");
     setCheckIn(booking?.checkIn || "");
     setCheckOut(booking?.checkOut || "");
-  }, [booking]);
+  }, [booking, roomType]);
 
   async function handleSubmit(e) {
     e.preventDefault();
     const bookingData = {
       id: booking?.id,
-      roomType,
+      roomType: roomOption,
       guestName,
       email,
       phone,
@@ -36,7 +38,11 @@ function BookingForm({ roomType, booking, onSubmit }) {
     <form onSubmit={handleSubmit}>
       <label>
         Room type:
-        <input type="text" name="roomType" value={roomType} readOnly className={styles.roomTypeInput} />
+        <select value={roomOption} onChange={(event) => setRoomOption(event.target.value)}>
+          <option value="Single">Single</option>
+          <option value="Double">Double</option>
+          <option value="Suite">Suite</option>
+        </select>{" "}
       </label>
       <label>
         Guest name:
