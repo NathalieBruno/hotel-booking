@@ -1,0 +1,72 @@
+.row {
+  font-size: 1rem;
+  color: #747479;
+}
+
+.id {
+  font-weight: 600;
+  color: #d4934d;
+}
+
+.phone {
+  color: #939292;
+}
+
+.roomType {
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.2em 0.8em;
+  display: inline-block;
+}
+
+.single {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+.double {
+  background: #fcf9de;
+  color: #f9a825;
+}
+.suite {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.actionBtn {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.5em 0.8em;
+  margin-left: 0.6em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionBtn:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.deleteBtn:hover {
+  background: #ffe5e5;
+}
+
+.deleteBtn:hover .deleteIcon {
+  filter: brightness(0.8);
+}
+
+.editBtn:hover {
+  background: #e3f2fd;
+}
+
+.editIcon,
+.deleteIcon {
+  font-size: 1.1em;
+  display: inline-block;
+}
+
+.pastBooking {
+  opacity: 0.8;
+  background-color: #f7f7f7;
+  color: #a0a0a0;
+}

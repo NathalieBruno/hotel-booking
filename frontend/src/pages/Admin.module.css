@@ -1,0 +1,32 @@
+.container {
+  padding: 1rem 3rem;
+  max-width: 100%;
+  margin-left: 1.5rem;
+  text-align: left;
+}
+
+.sectionTitle {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.activeBookingsToggle,
+.pastBookingsToggle {
+  margin-top: 2rem;
+}
+
+.activeBookingsToggle summary,
+.pastBookingsToggle summary {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #616060;
+}
+
+.activeBookingsToggle summary:hover,
+.pastBookingsToggle summary:hover {
+  color: #333131;
+}

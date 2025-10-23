@@ -1,0 +1,58 @@
+.hero {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.heroLeft,
+.heroRight {
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.heroLeft {
+  left: 0;
+  background-image: url("/public/toscana.webp");
+  background-position: left center;
+}
+
+.heroRight {
+  background-image: url("/public/Woman-walking-in-vineyards.jpg");
+  right: 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 0 2px 5px rgba(73, 31, 31, 0.3);
+  letter-spacing: 3px;
+  margin-bottom: -0.1rem;
+  line-height: 1.1;
+}
+
+.hero p {
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.heroContainer {
+  background-color: rgba(8, 2, 2, 0.2);
+  padding: 2rem 6rem;
+  border-radius: 2px;
+  backdrop-filter: blur(5px);
+  max-width: 700px;
+  margin-top: -170px;
+  position: relative;
+  z-index: 10;
+}

@@ -1,0 +1,96 @@
+.quoteSection {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quoteContainer {
+  max-width: 900px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.quote {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.quoteText {
+  font-size: 2rem;
+  line-height: 1.6;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #555454;
+  margin: 0 0 30px 0;
+  position: relative;
+}
+
+.quoteText::before {
+  content: '"';
+  font-size: 5rem;
+  color: #c0a995;
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  font-family: Georgia, serif;
+  opacity: 0.3;
+}
+
+.author {
+  display: block;
+  font-size: 1rem;
+  font-style: normal;
+  color: #666;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .quoteSection {
+    padding: 60px 20px;
+  }
+
+  .quoteText {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .quoteText::before {
+    font-size: 3rem;
+    top: -15px;
+    left: -20px;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .author {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quoteText {
+    font-size: 1.3rem;
+  }
+
+  .quoteText::before {
+    display: none;
+  }
+}
