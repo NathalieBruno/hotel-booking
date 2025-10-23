@@ -1,6 +1,5 @@
 const mysql = require("mysql2");
 
-// anslutning till min databas
 const db = mysql.createPool({
   host: "localhost",
   user: "root",

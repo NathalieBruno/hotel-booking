@@ -50,11 +50,19 @@
   .roomList {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 0.5rem 0;
   }
-}
 
-@media (max-width: 1024px) and (min-width: 769px) {
-  .roomList {
-    grid-template-columns: repeat(2, 1fr);
+  .main {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+
+  .title {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 }

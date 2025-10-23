@@ -30,3 +30,19 @@
 .pastBookingsToggle summary:hover {
   color: #333131;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .activeBookingsToggle summary,
+  .pastBookingsToggle summary {
+    font-size: 1.1rem;
+  }
+}

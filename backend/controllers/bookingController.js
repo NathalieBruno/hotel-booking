@@ -1,8 +1,6 @@
 const BookingDAO = require("../dao/BookingDAO");
 const bookingDAO = new BookingDAO();
 
-// Mina controller sköter kopplingen med DAO (min databas) genom enbart HTTP-anrop
-
 module.exports = {
   getAllBookings: async (_, response) => {
     try {

@@ -1,9 +1,9 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
+const bookingRoutes = require("./routes/bookingRoutes");
 const app = express();
 const port = 3000;
-const bookingRoutes = require("./routes/bookingRoutes");
-const cors = require("cors");
 
 app.use(cors());
 app.use(express.json());
