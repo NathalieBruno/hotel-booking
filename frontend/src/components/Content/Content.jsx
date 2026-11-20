@@ -7,7 +7,6 @@ function Content() {
         <div className={styles.imageSection}>
           <img src="/Vineyard-Dinner.webp" alt="Dinnertable in the hotel" className={styles.image} />{" "}
         </div>
-
         <div className={styles.textSection}>
           <div className={styles.header}>
             <h1 className={styles.title}>WINE & DINE</h1>
