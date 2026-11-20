@@ -5,7 +5,7 @@ function Content() {
     <section className={styles.contentSection}>
       <div className={styles.contentContainer}>
         <div className={styles.imageSection}>
-          <img src="/public/Vineyard-Dinner.webp" alt="Dinnertable in the hotel" className={styles.image} />
+          <img src="/Vineyard-Dinner.webp" alt="Dinnertable in the hotel" className={styles.image} />{" "}
         </div>
 
         <div className={styles.textSection}>
