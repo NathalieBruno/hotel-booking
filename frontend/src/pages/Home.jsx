@@ -20,16 +20,32 @@ function Home() {
   };
 
   async function handleAddBooking(booking) {
-    await postBooking(booking);
-    Swal.fire({
-      title: "Thank you for your booking!",
-      text: "We will send you a confirmation email shortly.",
-      icon: "success",
-      timer: 4000,
-      showConfirmButton: false,
-    });
-    close();
-    setSelectedRoom(null);
+    const isDemo = import.meta.env.PROD;
+
+    try {
+      if (!isDemo) {
+        await postBooking(booking);
+      }
+
+      close();
+      setSelectedRoom(null);
+
+      Swal.fire({
+        title: "Thank you for your booking!",
+        text: isDemo
+          ? "This is a demo booking. No actual reservation has been made."
+          : "Your booking has been registered successfully.",
+        icon: "success",
+        timer: 4000,
+        showConfirmButton: false,
+      });
+    } catch {
+      Swal.fire({
+        title: "Booking failed",
+        text: "Something went wrong. Please try again.",
+        icon: "error",
+      });
+    }
   }
 
   useEffect(() => {}, [bookings]);
