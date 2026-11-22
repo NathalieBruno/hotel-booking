@@ -6,5 +6,6 @@ export { default as BookingForm } from "./BookingModal/BookingForm";
 export { default as Hero } from "./Hero/Hero";
 export { default as RoomCard } from "./RoomCard/RoomCard";
 export { default as Content } from "./Content/Content";
+export { default as Highlights } from "./Highlights/Highlights";
 export { default as Quote } from "./Quote/Quote";
 export { default as Footer } from "./Footer/Footer";

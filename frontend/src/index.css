@@ -15,14 +15,15 @@
   --color-green-700: #424a42;
   --color-brown-700: #724d28;
   --color-brown-600: #956e47;
-  --color-title: #7c624c;
-  --color-subtitle: #7e6a55;
+  --color-title: #6a513c;
+  --color-subtitle: #6f5b47;
   --color-accent: #946e37;
 
   /* Status och neutrala knappar */
   --color-danger: #b3261e;
   --color-danger-dark: #8f1d17;
   --color-neutral-button: #e9e4dc;
+  --color-line: #d6d0c4;
 }
 
 * {
