@@ -1,7 +1,7 @@
 import { useState, useEffect, useSyncExternalStore } from "react";
 import axios from "axios";
 import demoBookings from "../data/demoBookings";
-import { IS_DEMO } from "../config";
+import { IS_DEMO, BOOKINGS_URL } from "../config";
 
 // Demoläge: gemensam lagring så att en bokning som skapas på startsidan syns i admin.
 // Data finns kvar vid navigering i appen men nollställs vid sidladdning.
@@ -34,7 +34,7 @@ function useBookingData() {
 
     async function getBookings() {
       try {
-        const response = await axios.get("http://localhost:3000/api/bookings");
+        const response = await axios.get(BOOKINGS_URL);
         setApiBookings(response.data);
       } catch (error) {
         console.error("Fel vid hämtning av bokningar från databas:", error);
@@ -52,7 +52,7 @@ function useBookingData() {
       return newBooking;
     }
     try {
-      const response = await axios.post("http://localhost:3000/api/bookings", booking);
+      const response = await axios.post(BOOKINGS_URL, booking);
       setBookings((prev) => [...prev, response.data]);
       return response.data;
     } catch (error) {
@@ -69,7 +69,7 @@ function useBookingData() {
       return updatedBooking;
     }
     try {
-      const response = await axios.put(`http://localhost:3000/api/bookings/${id}`, updatedBooking);
+      const response = await axios.put(`${BOOKINGS_URL}/${id}`, updatedBooking);
       setBookings((prev) => prev.map((booking) => (booking.id === id ? response.data : booking)));
       return response.data;
     } catch (error) {
@@ -84,7 +84,7 @@ function useBookingData() {
       return;
     }
     try {
-      await axios.delete(`http://localhost:3000/api/bookings/${id}`);
+      await axios.delete(`${BOOKINGS_URL}/${id}`);
       setBookings((prev) => prev.filter((booking) => booking.id !== id));
     } catch (error) {
       console.error("Fel vid borttagning av bokning:", error);

@@ -1,12 +1,13 @@
 import { Hero, RoomCard, BookingModal, Content, Highlights, Quote, Footer } from "../components";
 import { useModal, useBookingData } from "../hooks";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./Home.module.css";
 import { IS_DEMO } from "../config";
+import rooms from "../data/rooms";
 import Swal from "sweetalert2";
 
 function Home() {
-  const { bookings, postBooking } = useBookingData();
+  const { postBooking } = useBookingData();
   const [selectedRoom, setSelectedRoom] = useState(null);
   const { isOpen: isModalOpen, open, close } = useModal();
 
@@ -45,7 +46,6 @@ function Home() {
     }
   }
 
-  useEffect(() => {}, [bookings]);
   return (
     <>
       <a href="#main" className="skipLink">
@@ -64,27 +64,9 @@ function Home() {
             <p className={styles.subtitle}>Find your ideal stay</p>
           </div>
           <div className={styles.roomList}>
-            <RoomCard
-              title="Single"
-              description="Our smallest but coziest room, perfect for solo travelers seeking comfort and privacy."
-              price="From 145 € per night"
-              image="/rooms/single-bed.jpg"
-              onBook={handleBook}
-            />
-            <RoomCard
-              title="Double"
-              description="Spacious double room with a comfortable bed, ideal for two guests."
-              price="From 260 € per night"
-              image="/rooms/double.jpg"
-              onBook={handleBook}
-            />
-            <RoomCard
-              title="Suite"
-              description="An exclusive suite with a lounge area and private balcony with a view."
-              price="From 530 € per night"
-              image="/rooms/suite.jpg"
-              onBook={handleBook}
-            />
+            {rooms.map((room) => (
+              <RoomCard key={room.title} {...room} onBook={handleBook} />
+            ))}
           </div>
         </section>
 
