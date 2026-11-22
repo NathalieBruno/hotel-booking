@@ -106,7 +106,7 @@ npm install
 npm run dev
 ```
 
-Öppna `http://localhost:5173`. Frontend anropar backend på `http://localhost:3000` (adressen är för närvarande hårdkodad i `frontend/src/hooks/useBookingData.js`, så ändrar du `PORT` måste du ändra den också).
+Öppna `http://localhost:5173`. Frontend anropar backend på `http://localhost:3000`. Kör backend på en annan adress eller port: kopiera `frontend/.env.example` till `frontend/.env` och ändra `VITE_API_URL`.
 
 För att prova demoläget lokalt: `npm run build` och sedan `npm run preview`.
 
@@ -178,9 +178,3 @@ Projektet är utvecklat i utbildningssyfte och är inte avsett för verklig hote
 - Serverbaserad validering och kontroll av rumstillgänglighet (dubbelbokningar).
 - Utökad felhantering och säkerhetskonfiguration, till exempel begränsad CORS.
 - Betalningshantering och automatiska bokningsbekräftelser.
-
-API-adressen i frontend är för närvarande hårdkodad för lokal utveckling och skulle i produktion hanteras via en miljövariabel.
-
-## Licens
-
-Skapat i utbildningssyfte som portföljprojekt.

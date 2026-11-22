@@ -1,5 +1,11 @@
 import styles from "./BookingRow.module.css";
 
+const roomTypeClass = {
+  Single: styles.single,
+  Double: styles.double,
+  Suite: styles.suite,
+};
+
 function BookingRow({ booking, id, onEdit, onDelete }) {
   const isPast = new Date(booking.checkOut) < new Date();
 
@@ -12,19 +18,7 @@ function BookingRow({ booking, id, onEdit, onDelete }) {
         <div className={styles.phone}>{booking.phone}</div>
       </td>
       <td>
-        <span
-          className={
-            `${styles.roomType} ` +
-            (booking.roomType === "Single"
-              ? styles.single
-              : booking.roomType === "Double"
-              ? styles.double
-              : booking.roomType === "Suite"
-              ? styles.suite
-              : "")
-          }>
-          {booking.roomType}
-        </span>
+        <span className={`${styles.roomType} ${roomTypeClass[booking.roomType] ?? ""}`}>{booking.roomType}</span>
       </td>
       <td>{booking.checkIn}</td>
       <td>{booking.checkOut}</td>
