@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { IS_DEMO } from "../../config";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -40,6 +42,11 @@ export default function Footer() {
 
       <div className={styles.footerBottom}>
         <p>&copy; 2025 Vineyard Hotel. All rights reserved.</p>
+        {IS_DEMO && (
+          <p className={styles.demoLink}>
+            <Link to="/admin">Admin (demo)</Link>
+          </p>
+        )}
       </div>
     </footer>
   );

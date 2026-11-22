@@ -1,17 +1,41 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import axios from "axios";
 import demoBookings from "../data/demoBookings";
+import { IS_DEMO } from "../config";
+
+// Demoläge: gemensam lagring så att en bokning som skapas på startsidan syns i admin.
+// Data finns kvar vid navigering i appen men nollställs vid sidladdning.
+let demoState = [...demoBookings];
+const demoListeners = new Set();
+
+function setDemoBookings(updater) {
+  demoState = typeof updater === "function" ? updater(demoState) : updater;
+  demoListeners.forEach((listener) => listener());
+}
+
+function subscribeToDemo(listener) {
+  demoListeners.add(listener);
+  return () => demoListeners.delete(listener);
+}
+
+function getDemoSnapshot() {
+  return demoState;
+}
 
 function useBookingData() {
-  const isDemo = import.meta.env.PROD;
-  const [bookings, setBookings] = useState(isDemo ? demoBookings : []);
+  const isDemo = IS_DEMO;
+  const demoList = useSyncExternalStore(subscribeToDemo, getDemoSnapshot);
+  const [apiBookings, setApiBookings] = useState([]);
+  const bookings = isDemo ? demoList : apiBookings;
+  const setBookings = isDemo ? setDemoBookings : setApiBookings;
+
   useEffect(() => {
     if (isDemo) return;
 
     async function getBookings() {
       try {
         const response = await axios.get("http://localhost:3000/api/bookings");
-        setBookings(response.data);
+        setApiBookings(response.data);
       } catch (error) {
         console.error("Fel vid hämtning av bokningar från databas:", error);
       }
@@ -21,6 +45,12 @@ function useBookingData() {
   }, [isDemo]);
 
   async function postBooking(booking) {
+    if (isDemo) {
+      const nextId = demoState.reduce((max, item) => Math.max(max, item.id), 0) + 1;
+      const newBooking = { ...booking, id: nextId };
+      setBookings((prev) => [...prev, newBooking]);
+      return newBooking;
+    }
     try {
       const response = await axios.post("http://localhost:3000/api/bookings", booking);
       setBookings((prev) => [...prev, response.data]);
