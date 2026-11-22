@@ -1,0 +1,58 @@
+const demoBookings = [
+  {
+    id: 60,
+    guestName: "Sofia Moretti",
+    email: "sofia@example.com",
+    phone: "0700000001",
+    roomType: "Double",
+    checkIn: "2026-12-10",
+    checkOut: "2026-12-14",
+  },
+  {
+    id: 61,
+    guestName: "James Bond",
+    email: "james@example.com",
+    phone: "0700000002",
+    roomType: "Suite",
+    checkIn: "2027-01-05",
+    checkOut: "2027-01-09",
+  },
+  {
+    id: 62,
+    guestName: "Amara Okafor",
+    email: "amara@example.com",
+    phone: "0700000004",
+    roomType: "Single",
+    checkIn: "2026-12-20",
+    checkOut: "2026-12-23",
+  },
+  {
+    id: 46,
+    guestName: "Hiroshi Tanaka",
+    email: "hiroshi@example.com",
+    phone: "0700000003",
+    roomType: "Single",
+    checkIn: "2025-10-01",
+    checkOut: "2025-10-05",
+  },
+  {
+    id: 47,
+    guestName: "Holly Day",
+    email: "holly@example.com",
+    phone: "0700000005",
+    roomType: "Double",
+    checkIn: "2026-08-12",
+    checkOut: "2026-08-16",
+  },
+  {
+    id: 48,
+    guestName: "Alejandro García",
+    email: "alejandro@example.com",
+    phone: "0700000006",
+    roomType: "Suite",
+    checkIn: "2026-09-05",
+    checkOut: "2026-09-12",
+  },
+];
+
+export default demoBookings;
