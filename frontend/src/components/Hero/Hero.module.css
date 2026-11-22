@@ -47,7 +47,7 @@
 }
 
 .heroContainer {
-  background-color: rgba(8, 2, 2, 0.2);
+  background-color: rgba(8, 2, 2, 0.5);
   padding: 2rem 6rem;
   border-radius: 2px;
   backdrop-filter: blur(5px);

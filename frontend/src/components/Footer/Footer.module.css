@@ -75,8 +75,22 @@
 
 .footerBottom p {
   font-size: 0.9rem;
-  color: #999;
+  color: #b5b5b5;
   margin: 0;
+}
+
+.footerBottom .demoLink {
+  margin-top: 0.5rem;
+}
+
+.demoLink a {
+  color: #b5b5b5;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.demoLink a:hover {
+  color: #fff;
 }
 
 @media (max-width: 768px) {

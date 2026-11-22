@@ -29,13 +29,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
   backdrop-filter: blur(8px);
+  z-index: 1000;
 }
 
 .modal {
@@ -46,6 +49,11 @@
   width: 100%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
+  margin: auto;
+}
+
+.modal:focus {
+  outline: none;
 }
 
 .modal h2 {
@@ -101,7 +109,7 @@
   background: transparent;
   border: none;
   font-size: 2rem;
-  color: #888;
+  color: #757575;
   cursor: pointer;
   transition: color 0.2s, background 0.2s;
   z-index: 2;
@@ -122,4 +130,17 @@
     flex-direction: column;
     gap: 0.5rem;
   }
+}
+
+.hint {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #595959;
+}
+
+.modal input:user-invalid,
+.modal select:user-invalid {
+  border-color: #b3261e;
+  outline: 1px solid #b3261e;
 }

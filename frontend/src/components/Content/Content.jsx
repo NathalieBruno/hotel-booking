@@ -9,11 +9,11 @@ function Content() {
         </div>
         <div className={styles.textSection}>
           <div className={styles.header}>
-            <h1 className={styles.title}>WINE & DINE</h1>
+            <h2 className={styles.title}>WINE & DINE</h2>
           </div>
 
           <div className={styles.content}>
-            <h2 className={styles.subtitle}>BOOK A TABLE</h2>
+            <h3 className={styles.subtitle}>BOOK A TABLE</h3>
 
             <p className={styles.introText}>
               Experience the very best of Tuscany surrounded by rolling vineyards and the scent of sun-ripened grapes.
@@ -32,7 +32,7 @@ function Content() {
             </p>
 
             <div className={styles.infoBox}>
-              <h3 className={styles.infoTitle}>SERVING HOURS</h3>
+              <h4 className={styles.infoTitle}>SERVING HOURS</h4>
               <p className={styles.infoText}>Wednesday–Friday: 18.00–23.00</p>
               <p className={styles.infoText}>Saturday–Sunday: 17.00–01.00</p>
               <p className={styles.price}>PRICE: From 120 EUR/person</p>

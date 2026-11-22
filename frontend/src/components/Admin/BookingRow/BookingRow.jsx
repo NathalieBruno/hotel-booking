@@ -29,12 +29,26 @@ function BookingRow({ booking, id, onEdit, onDelete }) {
       <td>{booking.checkIn}</td>
       <td>{booking.checkOut}</td>
       <td>
-        <button className={styles.actionBtn} onClick={onEdit} aria-label="Change booking">
-          <span className={styles.editIcon}>✏️</span>
+        <button
+          type="button"
+          className={styles.actionBtn}
+          onClick={onEdit}
+          aria-label={`Edit booking #${id} for ${booking.guestName}`}
+          title="Edit booking">
+          <span className={styles.editIcon} aria-hidden="true">
+            ✏️
+          </span>
         </button>
 
-        <button className={`${styles.actionBtn} ${styles.deleteBtn}`} onClick={onDelete} aria-label="Delete booking">
-          <span className={styles.deleteIcon}>🗑️</span>
+        <button
+          type="button"
+          className={`${styles.actionBtn} ${styles.deleteBtn}`}
+          onClick={onDelete}
+          aria-label={`Delete booking #${id} for ${booking.guestName}`}
+          title="Delete booking">
+          <span className={styles.deleteIcon} aria-hidden="true">
+            🗑️
+          </span>
         </button>
       </td>
     </tr>

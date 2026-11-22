@@ -1,19 +1,20 @@
 import styles from "./BookingList.module.css";
 import BookingRow from "../BookingRow/BookingRow";
 
-function BookingList({ bookings = [], onEdit, onDelete }) {
+function BookingList({ bookings = [], caption, onEdit, onDelete }) {
   return (
     <div className={styles.tableWrapper}>
       <table className={styles.table}>
+        {caption && <caption className={styles.srOnly}>{caption}</caption>}
         <thead>
           <tr>
-            <th>Booking ID</th>
-            <th>Guest</th>
-            <th>Contact</th>
-            <th>Room type</th>
-            <th>Check-in</th>
-            <th>Check-out</th>
-            <th>Manage booking</th>
+            <th scope="col">Booking ID</th>
+            <th scope="col">Guest</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Room type</th>
+            <th scope="col">Check-in</th>
+            <th scope="col">Check-out</th>
+            <th scope="col">Manage booking</th>
           </tr>
         </thead>
         <tbody>

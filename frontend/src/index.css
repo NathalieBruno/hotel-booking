@@ -19,6 +19,30 @@ body {
   padding: 0;
 }
 
+/* Synlig fokusmarkering för tangentbordsanvändare (WCAG 2.4.7 / 2.4.11) */
+:focus-visible {
+  outline: 3px solid #724d28;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip link: syns bara när den får tangentbordsfokus */
+.skipLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  background: #263627;
+  color: #fff;
+  font-weight: 700;
+  transform: translateY(-120%);
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
 h1,
 h2,
 h3,

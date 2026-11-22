@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useModal, useBookingData } from "../hooks";
 import { AdminHeader, BookingList, BookingModal } from "../components";
 import Swal from "sweetalert2";
@@ -5,6 +6,13 @@ import styles from "./Admin.module.css";
 
 function Admin() {
   const { bookings, updateBooking, deleteBooking } = useBookingData();
+  useEffect(() => {
+    document.title = "Admin – Villa Toscany";
+    return () => {
+      document.title = "Villa Toscany – Vineyard hotel in Tuscany";
+    };
+  }, []);
+
   const { isOpen: isEditModalOpen, index: editIndex, open, close } = useModal();
 
   const activeBookings = bookings.filter((booking) => new Date(booking.checkOut) >= new Date());
@@ -40,17 +48,17 @@ function Admin() {
     <>
       <AdminHeader />
 
-      <div className={styles.container}>
+      <main className={styles.container}>
         <details className={styles.activeBookingsToggle} open>
           <summary>Open bookings ({activeBookings.length})</summary>
-          <BookingList bookings={activeBookings} onEdit={open} onDelete={handleDeleteBooking} />
+          <BookingList caption="Open bookings" bookings={activeBookings} onEdit={open} onDelete={handleDeleteBooking} />
         </details>
 
         <details className={styles.pastBookingsToggle}>
           <summary>Closed bookings ({pastBookings.length})</summary>
-          <BookingList bookings={pastBookings} onEdit={open} onDelete={handleDeleteBooking} />
+          <BookingList caption="Closed bookings" bookings={pastBookings} onEdit={open} onDelete={handleDeleteBooking} />
         </details>
-      </div>
+      </main>
 
       {isEditModalOpen &&
         (() => {

@@ -23,8 +23,8 @@ const demoBookings = [
     email: "amara@example.com",
     phone: "0700000004",
     roomType: "Single",
-    checkIn: "2029-12-20",
-    checkOut: "2029-12-23",
+    checkIn: "2026-06-20",
+    checkOut: "2026-06-23",
   },
   {
     id: 46,

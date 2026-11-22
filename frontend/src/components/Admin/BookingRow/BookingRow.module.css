@@ -5,11 +5,11 @@
 
 .id {
   font-weight: 600;
-  color: #d4934d;
+  color: #9b6b38;
 }
 
 .phone {
-  color: #939292;
+  color: #767575;
 }
 
 .roomType {
@@ -21,15 +21,15 @@
 
 .single {
   background: #e3f2fd;
-  color: #1976d2;
+  color: #176dc1;
 }
 .double {
   background: #fcf9de;
-  color: #f9a825;
+  color: #986617;
 }
 .suite {
   background: #e8f5e9;
-  color: #388e3c;
+  color: #317c34;
 }
 
 .actionBtn {
@@ -66,7 +66,6 @@
 }
 
 .pastBooking {
-  opacity: 0.8;
   background-color: #f7f7f7;
-  color: #a0a0a0;
+  color: #707070;
 }
