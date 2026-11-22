@@ -32,7 +32,7 @@
 .description {
   margin: 0.2rem 1.5rem 0.5rem;
   padding: 0 0.5rem;
-  color: #757575;
+  color: var(--color-text-muted);
   font-weight: 400;
   font-size: 0.9rem;
   line-height: 1.5;
@@ -40,7 +40,7 @@
 
 .price {
   margin: 1rem 1rem 0.5rem 1rem;
-  color: #946e37;
+  color: var(--color-accent);
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.5px;
@@ -58,7 +58,7 @@
 .card button {
   margin: 0 1rem 0.5rem 1rem;
   padding: 0.85rem 2rem;
-  background-color: #424a42;
+  background-color: var(--color-green-700);
   color: white;
   border: none;
   border-radius: 6px;
@@ -70,7 +70,7 @@
 }
 
 .card button:hover {
-  background-color: #263627;
+  background-color: var(--color-green-900);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

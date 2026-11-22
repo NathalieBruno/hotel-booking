@@ -5,11 +5,11 @@
 
 .id {
   font-weight: 600;
-  color: #9b6b38;
+  color: var(--color-accent);
 }
 
 .phone {
-  color: #767575;
+  color: var(--color-text-muted);
 }
 
 .roomType {
@@ -67,5 +67,5 @@
 
 .pastBooking {
   background-color: #f7f7f7;
-  color: #707070;
+  color: var(--color-text-muted);
 }

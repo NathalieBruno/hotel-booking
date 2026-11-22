@@ -92,14 +92,14 @@
   font-size: 1rem;
   border: none;
   border-radius: 6px;
-  background: #956e47;
+  background: var(--color-brown-600);
   color: white;
   cursor: pointer;
   width: 100%;
   transition: background 0.2s;
 }
 .submitBtn:hover {
-  background: #724d28;
+  background: var(--color-brown-700);
 }
 
 .close {
@@ -109,7 +109,7 @@
   background: transparent;
   border: none;
   font-size: 2rem;
-  color: #757575;
+  color: var(--color-text-muted);
   cursor: pointer;
   transition: color 0.2s, background 0.2s;
   z-index: 2;
@@ -121,7 +121,7 @@
   justify-content: center;
 }
 .close:hover {
-  color: #333;
+  color: var(--color-text);
   background: #eee;
 }
 
@@ -136,11 +136,11 @@
   margin-top: 0.3rem;
   font-size: 0.8rem;
   line-height: 1.4;
-  color: #595959;
+  color: var(--color-text-muted);
 }
 
 .modal input:user-invalid,
 .modal select:user-invalid {
-  border-color: #b3261e;
-  outline: 1px solid #b3261e;
+  border-color: var(--color-danger);
+  outline: 1px solid var(--color-danger);
 }

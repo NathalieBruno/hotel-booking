@@ -21,9 +21,9 @@
 .title {
   font-size: 44px;
   font-weight: 400;
-  color: #7c624c;
+  color: var(--color-title);
   margin: 0 auto 0.5rem;
-  font-family: serif;
+  font-family: var(--font-heading);
   letter-spacing: 3px;
   position: relative;
 }
@@ -33,14 +33,14 @@
   display: block;
   width: 70px;
   height: 2px;
-  background: #7c624c;
+  background: var(--color-title);
   margin: 1rem auto;
   opacity: 0.5;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #7e6a55;
+  color: var(--color-subtitle);
   font-weight: 300;
   letter-spacing: 1px;
   margin: 0;

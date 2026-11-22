@@ -29,9 +29,10 @@ function Admin() {
       text: "This booking will be permanently deleted and cannot be restored.",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#589b59ff",
-      cancelButtonColor: "rgba(224, 66, 66, 1)",
       confirmButtonText: "Yes, delete booking",
+      cancelButtonText: "Cancel",
+      focusCancel: true,
+      customClass: { confirmButton: "swalDanger", cancelButton: "swalNeutral" },
     });
 
     if (result.isConfirmed) {

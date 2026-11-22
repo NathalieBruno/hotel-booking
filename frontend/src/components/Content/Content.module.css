@@ -16,7 +16,7 @@
 .imageSection {
   flex: 1;
   min-width: 0;
-  background-color: #2d3e2e;
+  background-color: var(--color-green-800);
   padding: 90px;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@
   font-weight: 400;
   letter-spacing: 2px;
   margin: 0;
-  font-family: serif;
+  font-family: var(--font-heading);
 }
 
 .content {
