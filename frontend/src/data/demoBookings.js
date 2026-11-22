@@ -5,8 +5,8 @@ const demoBookings = [
     email: "sofia@example.com",
     phone: "0700000001",
     roomType: "Double",
-    checkIn: "2026-12-10",
-    checkOut: "2026-12-14",
+    checkIn: "2028-12-10",
+    checkOut: "2028-12-14",
   },
   {
     id: 61,
@@ -23,8 +23,8 @@ const demoBookings = [
     email: "amara@example.com",
     phone: "0700000004",
     roomType: "Single",
-    checkIn: "2026-12-20",
-    checkOut: "2026-12-23",
+    checkIn: "2029-12-20",
+    checkOut: "2029-12-23",
   },
   {
     id: 46,
@@ -41,8 +41,8 @@ const demoBookings = [
     email: "holly@example.com",
     phone: "0700000005",
     roomType: "Double",
-    checkIn: "2026-08-12",
-    checkOut: "2026-08-16",
+    checkIn: "2026-12-23",
+    checkOut: "2026-12-25",
   },
   {
     id: 48,
@@ -50,8 +50,8 @@ const demoBookings = [
     email: "alejandro@example.com",
     phone: "0700000006",
     roomType: "Suite",
-    checkIn: "2026-09-05",
-    checkOut: "2026-09-12",
+    checkIn: "2027-09-05",
+    checkOut: "2027-09-12",
   },
 ];
 
