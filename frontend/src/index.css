@@ -1,3 +1,31 @@
+:root {
+  /* Typsnitt */
+  --font-heading: "DM Serif Text", Georgia, serif;
+  --font-body: "Lato", Arial, Helvetica, sans-serif;
+
+  /* Ytor och text */
+  --color-bg: #f7f3eb;
+  --color-text: #333;
+  --color-text-muted: #6e6e6e;
+  --color-on-dark-muted: #b5b5b5;
+
+  /* Varumärke: grönt (knappar, footer) och brunt (rubriker, accenter) */
+  --color-green-900: #263627;
+  --color-green-800: #2d3e2e;
+  --color-green-700: #424a42;
+  --color-brown-700: #724d28;
+  --color-brown-600: #956e47;
+  --color-title: #6a513c;
+  --color-subtitle: #6f5b47;
+  --color-accent: #946e37;
+
+  /* Status och neutrala knappar */
+  --color-danger: #b3261e;
+  --color-danger-dark: #8f1d17;
+  --color-neutral-button: #e9e4dc;
+  --color-line: #d6d0c4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +33,11 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.5;
-  background-color: rgb(247, 243, 235);
-  color: #333;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   overflow-x: hidden;
 }
 
@@ -21,7 +49,7 @@ body {
 
 /* Synlig fokusmarkering för tangentbordsanvändare (WCAG 2.4.7 / 2.4.11) */
 :focus-visible {
-  outline: 3px solid #724d28;
+  outline: 3px solid var(--color-brown-700);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -33,7 +61,7 @@ body {
   left: 0;
   z-index: 2000;
   padding: 0.75rem 1.25rem;
-  background: #263627;
+  background: var(--color-green-900);
   color: #fff;
   font-weight: 700;
   transform: translateY(-120%);
@@ -49,22 +77,33 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: serif;
+  font-family: var(--font-heading);
+  font-weight: 400;
 }
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
 p {
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   font-style: normal;
 }
 
 .swal2-title {
+  font-family: var(--font-heading);
   font-size: 1.4rem;
-  color: #5f5858;
+  color: var(--color-text);
   letter-spacing: 1px;
 }
 .swal2-popup {
   font-size: 1rem;
-  color: #655c5c;
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
 }
 
 .swal2-confirm,
@@ -74,4 +113,23 @@ p {
   border-radius: 4px;
   letter-spacing: 0.3px;
   font-weight: bold;
+}
+
+/* Raderingsdialog: röd bekräfta-knapp och neutral avbryt-knapp */
+.swal2-styled.swal2-confirm.swalDanger {
+  background-color: var(--color-danger);
+  color: #fff;
+}
+
+.swal2-styled.swal2-confirm.swalDanger:hover {
+  background-color: var(--color-danger-dark);
+}
+
+.swal2-styled.swal2-cancel.swalNeutral {
+  background-color: var(--color-neutral-button);
+  color: var(--color-text);
+}
+
+.swal2-styled.swal2-cancel.swalNeutral:hover {
+  background-color: #ddd6cb;
 }

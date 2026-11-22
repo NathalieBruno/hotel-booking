@@ -49,7 +49,7 @@ td {
 }
 
 th {
-  color: #6e6e6e;
+  color: var(--color-text-muted);
   font-weight: 600;
   background: none;
   border-bottom: 2px solid #f2f2f2;
@@ -62,7 +62,7 @@ td {
 
 .empty {
   text-align: center;
-  color: #757575;
+  color: var(--color-text-muted);
   font-style: italic;
   padding: 2rem 0;
 }

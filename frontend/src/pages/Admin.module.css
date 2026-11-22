@@ -9,7 +9,7 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  color: #333;
+  color: var(--color-text);
 }
 
 .activeBookingsToggle,

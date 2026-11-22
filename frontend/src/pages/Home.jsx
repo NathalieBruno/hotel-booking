@@ -1,4 +1,4 @@
-import { Hero, RoomCard, BookingModal, Content, Quote, Footer } from "../components";
+import { Hero, RoomCard, BookingModal, Content, Highlights, Quote, Footer } from "../components";
 import { useModal, useBookingData } from "../hooks";
 import { useState, useEffect } from "react";
 import styles from "./Home.module.css";
@@ -87,6 +87,8 @@ function Home() {
             />
           </div>
         </section>
+
+        <Highlights />
 
         <Quote
           subtitle="THE EXPERIENCE"

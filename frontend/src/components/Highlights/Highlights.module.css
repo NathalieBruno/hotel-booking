@@ -1,0 +1,90 @@
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3.5rem;
+}
+
+/* Rubrik med tunna streck på båda sidor */
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2.75rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--color-title);
+  margin-bottom: 2.5rem;
+}
+
+.title::before,
+.title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-line);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.cardTitle {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-green-800);
+}
+
+.text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Streck under sektionen, före citatet */
+.divider {
+  height: 1px;
+  margin-top: 3.5rem;
+  background: var(--color-line);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-bottom: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .divider {
+    margin-top: 2.5rem;
+  }
+}
