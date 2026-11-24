@@ -10,7 +10,7 @@ Projektet demonstrerar komponentbaserad frontendutveckling, tillståndshantering
 
 > Demon sparar data i webbläsarens minne och nollställs när sidan laddas om. Vill du se en bokning du själv har skapat i admin, öppna admin via länken "Admin (demo)" längst ner på startsidan i stället för att skriva in adressen.
 
-## Höjdpunkter
+## Teknisk översikt
 
 **Frontend**
 - Komponentbaserad React-app med routing, custom hooks (`useBookingData`, `useModal`) och CSS Modules.
